@@ -1,80 +1,108 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+        <!-- TODO: Fix jQuery and such -->
+        <script src="https://use.fontawesome.com/59f27f4266.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Cutive+Mono' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>E.L.B. Weblog</title>
+    </head>
+    <body>
 
-<htlm>
+        <header>
 
-	<title>Limecode</title>
+            <div class="header-main-content">
 
-	<head>
+                <div id="logo">
+                    <h1>Emil.L.B</h1>
+                    <h2>Personal Website & Blog</h2>
+                </div>
+            </div>
 
-		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        </header>
 
-		<link rel="stylesheet" type="text/css" href="style.css" />
+        <nav id="main-nav">
+            <ul>
+                <a id="active" href="index.html">
+                    <li>Blog</li>
+                </a>
+                <a href="about.html">
+                    <li>About</li>
+                </a>
+                <a href="contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
 
-	</head>
+        </nav>
 
-	<body>
+        <main>
 
-		<div class="header"><h1>Welcome to a quite meaningless site</h1><center><p class="header"><i>Or a noob web developers blog</i></p></center></div>
+            <article class="blog-entry">
+                <h1>Got accepted to KTH</h1>
+                <h2>And so far it's awesome!</h2>
+                <p>
+                    So I just got into KTH, Swedish Royal Institute of Technology. Which is one of the two greatest technology universities in Sweden. KTH is obviously a tad better than Chalmers, the #2 university.
+                </p>
+                <p>
+                     So far it's been a very positive experience. The facility is modern and doesn't lack power outlets. The courses feel rigid and serious (and hard). And lastly the people. The people there are super cool and nice. Couldn't be more happy with my choice this fall.
+                </p>
+                <p class="date">
+                    02 - 09 - 2016
+                </p>
+            </article>
 
-		<div id="content">
+            <article class="blog-entry">
+                <h1>Site updated!</h1>
+                <h2>Flexboxe'd, HTML5-tagged & mobile friendly!</h2>
+                <p>
+                    So I got an urge to fix the last few things with the fite before I went to bed. The last couple of days I have started to rewrite the site in flexbox and HTML5. As well as making it mobile friendly. Which basically means that I replaced divs with different classes with propper HTML5 tags such as, <code>&lt;article&gt;</code> for the blog entries and <code>&lt;main&gt;</code> for the main page. If I'm not mistaken this is beneficial for search engines and screen-readers.
+                </p>
+                <p>
+                    I've also decided that I wont bother supporting old browsers at all (I will still support the different major browsers). It's both more fun and convenient to use newer technologies. This was not my own idea, rather I was linked <a href="http://alistapart.com/article/tohell">this article</a> after making a thread on reddit asking why I should use anything else than flexbox when I can. Afther which I drew the conclusion that I wont bother supporting stone age technology. Both because it's tedious and because I will be pulling my weight help push people to upgrade their browesers. And to push corporations to update from Windows XP and its ancient IE browser!
+                </p>
+                <p class="date">
+                    08 - 08 - 2016
+                </p>
+            </article>
 
-			<div id="menu">
-				<ul>
-					<li><a href="index.html" class="current">Home</a></li>
-					<li><a href="problem.html">Problem?</a></li>
-					<li><a href="about.html">About</a></li>
-				</ul>
-			</div>
+            <article class="blog-entry">
+                <h1>Damn, CSS is tricky...</h1>
+                <p>
+                    So i just managed to solve a irritating bug with the site, where I could not get the footer to properly stick to the bottom of the page.<br>
+                    My solution was:
+                </p>
+                    <ol class="general-list">
+                        <li>Use the somewhat standard "sticky footer" implementation. You wrap everything above the footer in a "wrapper" div. This includes the header. The wrapper should have a min-height of <code>calc(100vh - [footer pixel height])</code>.<br>You can find the height by either specifially setting it (watch your paddings and margins), or by inspecting it with your browsers developer tools.<br>Consult <a href="https://css-tricks.com/snippets/css/sticky-footer/">CSS-Tricks</a> guide for a propper solution that works across older browsers as well.</li>
+                        <li>Remove the vertical margins on the footer content! Use padding intead.<br>This was the mistake I made that made sticking the footer to the bottom much more difficult than it had to be.</li>
+                        <li>Prepare to get screwed by CSS. Inspect everything with the developer tools of choice and don't give up!</li>
+                    </ol>
+                <p>
+                    Next time ill update the layout of this site, including making CSS responsive for mobile. Im currently learning alot on CSS layouts over at TeamTreeHouse!
+                </p>
+                <p class="date">15 - 06 - 2016</p>
+            </article>
 
-			<div id="main">
+            <article class="blog-entry">
+                <h1>Hello World!</h1>
+                <h2>(Isn't that what you start with?)</h2>
+                <p>
+                    On this site I'll write about everything development related. Even though the topic of this blog will be 90% <strong>Web Development</strong> I might write about other kinds of IT related stuff. Everything ranging from IT-politics, App and Desktop Development.
+                </p>
+                <p class="date">28 - 05 - 2016</p>
+            </article>
 
-				<h2>And yet another update!</h2>
+        </main>
 
-				<p>Since last update I have done quite some things. I applied and got into KTH (Royal Institute of Technology) to study computer sience. But after a semester there I decided to quit to move to the European capital of Culture, Ume&aring;, to study computer sience there as well. I will do this to try something new, to move to a completely new city, move away from my parents and friend (but one who will join me). This will be exciting! :D</p>
-				<p>While awaiting to move this fall I occasionally work at my fathers chimeny sweeping firm, as well as making this site a bit better, and to learn more about programming!</p>
-
-				<hr />
-
-				<h2>Update!</h2>
-
-				<p>Since last summer I have learnt a lot about IT stuff. I picked Programming A and B classes as my extra classes. So I know a bit more aobut progamming and such. I have not learnt anymore HTML or CSS but i still know it quite good.
-				</br>
-				Today I also applied for a universety school with computer-tec (software-ish) orientation.</p>
-
-				<hr />
-
-				<h2>An Awesome Song</h2>
-
-				<p>Mady by my friend Simon! :)</p>
-
-				<iframe width="700" height="418" src="http://www.youtube.com/embed/QWBa2QVe_1k" frameborder="0" allowfullscreen></iframe>
-
-				<p><i>Select 480p quality for best sound quality!</i></p>
-
-				<hr />
-
-				<h2> A little bit of information</h2>
-
-				<p>This site is completely hand-made and serves the purpose of learning me HTML, CSS and JavaScript. But as I progress I will problaby use this as a not very serious blog and when I have become a bit better I'll turn this site into something interesting!</p>
-
-				<p class="border"><u><b>Note:</b></u> I suggest you not to use Internet Explorer while browsing this page (especially not older versions). I have learned that IE has alot of compatibility problems with the new HTML versions unless you use alot of complicated workarounds wich I don't bother to learn so far. I'd suggest to use Google Chrome, Mozilla Firefox, Safari or Opera.</p>
-
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vitae nisi in nisl vulputate interdum. Praesent at elit eros, vitae blandit mauris. Cras molestie, nulla sit amet placerat lacinia, est felis blandit risus, ac commodo lorem lorem in dui. Maecenas quam mi, ultrices id condimentum id, euismod ac massa. Sed et justo eu lectus aliquet tincidunt. Suspendisse dictum tellus sed massa egestas aliquet. Pellentesque vel libero vitae nisi malesuada condimentum et id metus. Donec non eros sapien. Maecenas commodo imperdiet nulla, a gravida felis ultricies eu. Aenean sagittis leo non dolor tincidunt ultricies. Proin convallis, orci vitae cursus tempor, turpis lorem mollis nisi, ut mattis neque nunc ut velit. Ut et ligula est. Sed pulvinar eleifend lorem, quis ullamcorper orci molestie at. Nullam non nisl mauris, eget blandit dolor. Nam interdum, nisl ac dapibus euismod, urna enim commodo turpis, eget hendrerit nisl enim eu purus.</p>
-
-			</div>
-
-			<div id="sidebar">
-
-				<h2 class="sidebar">Sidebar!</h2>
-
-				<p class="sidebar">I will possibly put some intresting sub-navingation here that will change depending on what category you choose first!</p>
-
-			</div>
-
-			<div class="footer"><p class="footer">&copy; 2011 emil93.webs.com</p></div>
-
-		</div>
-
-	</body>
-	</html>
+        <footer>
+            <p>
+                &copy 2016 Emil Lindholm Brandt
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+            </p>
+        </footer>
+    </body>
+</html>
