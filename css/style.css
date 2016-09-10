@@ -1,0 +1,432 @@
+/************************************
+                GENERAL
+*************************************/
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    font-family: 'Cursive Mono', monospace;
+}
+
+#logo h1 {
+    font-size: 5em;
+    font-family: 'Cursive Mono', monospace;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#logo h2 {
+    font-size: 2.7em;
+    font-family: 'Cursive Mono', monospace;
+    font-weight: lighter;
+}
+
+code {
+    font-family: monospace;
+    background-color: #EAEDED;
+    padding: 3px;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-family: 'Cursive Mono', monospace;
+    font-weight: lighter;
+    margin: 0 0 5px;
+}
+
+h2 {
+    font-size: 1.25em;
+    font-family: 'Cursive Mono', monospace;
+    font-weight: lighter;
+    color: #AEB6BF;
+    margin-top: 0;
+}
+
+p {
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.75;
+}
+
+ol,
+ul {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    line-height: 1.75;
+}
+
+
+
+/************************************
+                HEADER
+*************************************/
+
+header {
+    padding: 15px 0 0;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 5px;
+    align-items: center;
+}
+
+#logo {
+    text-align: center;
+    font-size: 0.6em;
+}
+
+#header-picture {
+    display: none;
+}
+
+
+/************************************
+            NAVIGATION
+*************************************/
+
+#main-nav ul {
+    flex-grow: 1;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#main-nav li {
+    /*border: 1px solid red;*/
+}
+
+#main-nav ul a {
+    padding: 10px 0;
+    text-align: center;
+    flex-grow: 1;
+    border-bottom: 3px solid transparent;
+}
+
+nav ul #active {
+    border-bottom: 3px solid #F39C12;
+}
+
+
+/************************************
+            BLOG ENTRY
+*************************************/
+
+.blog-entry:first-of-type {
+    margin-top: 25px;
+}
+
+.blog-entry {
+    max-width: 90%;
+    border-bottom: 3px solid grey;
+    margin-top: 25px;
+}
+
+.blog-entry .date {
+    font-weight: lighter;
+    font-style: italic;
+    text-align: right;
+}
+
+.blog-entry:last-of-type {
+    border: none;
+}
+
+
+
+/************************************
+                ABOUT
+*************************************/
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: stretch;
+
+    margin-top: 25px;
+    padding: 0 0 15px;
+    max-width: 90%;
+    text-align: left;
+}
+
+.profile-picture {
+    float: right;
+    width: 40%;
+    border-radius: 100%;
+    border: 3px solid #7DCEA0;
+}
+
+.secondary {
+    margin-top: 20px;
+}
+
+.secondary ul {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.secondary ul ul {
+    margin-top: 5px;
+}
+
+
+/************************************
+                FOOTER
+*************************************/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+footer p {
+    font-family: 'Cursive Mono', monospace;
+}
+
+
+/************************************
+                COLORS
+*************************************/
+
+header {
+    background: #1C2833;
+}
+
+nav {
+    background: #243342;
+}
+
+header h1 {
+    color: white;
+}
+
+header h2 {
+    color: #7DCEA0;
+}
+
+.blog-entry .date {
+    color: #85929E;
+}
+
+footer {
+    color: white;
+    background: #1C2833;
+}
+
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #F39C12;
+}
+
+.blog-entry a:hover {
+    color: #F8C471;
+    text-decoration: underline;
+}
+
+#main-nav a,
+#main-nav a:link,
+#main-nav a:visited {
+    background: inherit;
+    font-size: 1em;
+    text-decoration: none;
+    color: #F39C12;
+}
+
+#main-nav a:hover {
+    background: #F39C12;
+    color: white;
+    text-decoration: underline;
+}
+
+/*******************************
+    CLEARFIX
+********************************/
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*******************************
+        MEDIA QUERIES
+********************************/
+/*
+    TABLET
+*/
+@media screen and (min-width: 768px) {
+
+    #main-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    #main-nav ul {
+        width: 80%;
+        max-width: 900px;
+    }
+
+    #main-nav ul a {
+        padding: 20px 0;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .blog-entry {
+        width: 80%;
+        max-width: 900px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    ol,
+    ul {
+        font-size: 1em;
+    }
+
+    .blog-entry:last-of-type {
+        margin-bottom: 50px;
+    }
+}
+
+/*
+    ABOUT (TABLET)
+*/
+
+/* TODO: About Page better? */
+
+/*
+    DESKTOP
+*/
+
+@media screen and (min-width: 1024px) {
+
+    #main-nav ul {
+        width: 70%;
+        max-width: 900px;
+    }
+
+    header {
+        padding: 30px 0 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+    }
+
+    /*************************
+        BLOG ENTRY
+    **************************/
+
+    .blog-entry {
+        width: 70%;
+        max-width: 900px;
+    }
+
+    .blog-entry h1 {
+        font-size: 3em;
+    }
+
+    .blog-entry h2 {
+        font-size: 2em;
+    }
+
+    .blog-entry p {
+        font-size: 1em;
+    }
+
+    .blog-entry ol,
+    .blog-entry ul {
+        font-size: 1em;
+    }
+
+    .blog-entry:last-of-type {
+        margin-bottom: 50px;
+    }
+
+    /*************************
+            ABOUT
+    **************************/
+
+    .about {
+        width: 70%;
+        max-width: 900px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .col {
+        /*padding: 0 20px;*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .secondary {
+        flex: 1;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .profile-picture {
+        width: 80%;
+    }
+
+    .primary {
+        flex: 2;
+        text-align: left;
+    }
+}

@@ -1,51 +1,93 @@
-<!DOCTYPE HTML>
-<htlm>
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+        <!-- TODO: Fix jQuery and such -->
+        <script src="https://use.fontawesome.com/59f27f4266.js"></script>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Cutive+Mono' rel='stylesheet' type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>E.L.B. Weblog</title>
+    </head>
+    <body>
 
-	<title>About</title>
+        <header>
 
-	<head>
+            <div class="header-main-content">
 
-		<link rel="shortcut icon" href="e-favicon.ico">
+                <img id="header-picture" src="img\emil_effekt.jpg" alt="An artsy picture of me" />
 
-		<link rel="stylesheet" type="text/css" href="style.css" />
+                <div id="logo">
+                    <h1>Emil.L.B</h1>
+                    <h2>Personal Website & Blog</h2>
+                </div>
+            </div>
 
-	</head>
+        </header>
 
-	<body>
+        <nav id="main-nav">
+            <ul>
+                <a href="index.html">
+                    <li>Blog</li>
+                </a>
+                <a id="active" href="about.html">
+                    <li>About</li>
+                </a>
+                <a href="contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
 
-		<div class="header"><h1>You are still welcome to a quite meaningless site</h1><center><p class="header"><i>Or a noob web developers blog</i></p></center></div>
+        </nav>
 
-		<div id="content">
+        <main class="about">
 
-			<div id="menu">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="problem.html">Problem?</a></li>
-					<li><a href="about.html" class="current">About</a></li>
-				</ul>
-			</div>
+            <div class="col primary">
+                <h1>About me</h1>
+                <p>
+                    My name is Emil Lindholm Brandt. I'm a Swedish guy from a southern suburb to our capital Stockholm. My father has always been interested in computers and been hosting and making websites when I was little. Therefore it became a second nature to me to be around computers (and at the time, advanced usage). When I got older I started playing computer games, and it didn't take long until I started to wonder how games worked. And how the computer worked in general. Why would certain actions trigger depending on which choice I made in my OS?
+                </p>
+                <p>
+                    As we all know, Google is your friend. So I started looking up such things. And while it was interesting indeed I felt that it was too advanced to get into myself. But in high school I took Programming A & B classes, which was my real gameway into IT. After high school I took a distance course in Programming 1 on university level and I was hooked.
+                </p>
+                <p>
+                    Believe it or not, I do have hobbies outside of technology. A Friday evening is best spent with some friends, a bunch of instruments and some nice jamming. And while it sound cliche a long brisk walk in the woods is the best way to start a day off. I also enjoy discussing and reading about politics, society and contemplating philosophical ideas.
+                </p>
+                <p>
+                    At the moment I'm studying at KTH to become a Engineer in the field of Computer Science. I use this site both as a personal website and blog. I will possibly use this site as a portofio in the future when I have made a couple of things to fill such a portfolio with.
+                </p>
+                <p>
+                    If you want to get in touch with me regarding IT related work, such as IT support, making websites or coding something, please consult the <a href="contact.html">Contact</a> tab.
+                </p>
+            </div>
 
-			<div id="main">
+            <div class="col secondary">
+                <img class="profile-picture" src="img/emil2.jpg" alt="A picture of me" />
+                <h2>Quick Facts</h2>
+                <ul class="general-list">
+                    <li><b> Age:</b> 23</li>
+                    <li><b>Location:</b> Stockholm</li>
+                    <li><b>Occupation:</b> Student</li>
+                    <li><b>Field:</b> Computer Science</li>
+                    <li><b>Interests:</b>
+                        <ul>
+                            <li>Outdoor adventures</li>
+                            <li>Playing music</li>
+                            <li>Coding away</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-				<h2>About This Meningless Site</h2>
+        </main>
 
-				<p>This is a site that I (Emil) use to learn myself HTML and CSS, but I haven't been able to work on it for a while due to school and general lack of time/interest.</br>
-					Also, I want to give credits to my brother for making the favicon (the small icon for the site in the tab). He is much better at art than me!</p>
-
-				</div>
-
-				<div id="sidebar">
-
-					<h2 class="sidebar">Sidebar!</h2>
-
-					<p class="sidebar">I will possibly put some intresting sub-navingation here that will change depending on what category you choose first!</p>
-
-				</div>
-
-				<div class="footer"><p class="footer">&copy; 2011 emil93.webs.com</p></div>
-
-			</div>
-
-		</body>
-
-		</html>
+        <footer>
+            <p>
+                &copy 2016 Emil Lindholm Brandt
+                <i class="fa fa-coffee" aria-hidden="true"></i>
+            </p>
+        </footer>
+    </body>
+</html>
